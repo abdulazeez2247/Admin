@@ -1,4 +1,3 @@
-// src/components/SportsPercentageChart.jsx
 import React from 'react';
 import {
   PieChart,
@@ -11,7 +10,6 @@ import {
 
 const COLORS = ['#10b981', '#6366f1', '#f59e0b', '#ef4444', '#3b82f6'];
 
-// Custom label rendering
 const renderCustomizedLabel = ({ percent }) => {
   return `${(percent * 100).toFixed(0)}%`;
 };

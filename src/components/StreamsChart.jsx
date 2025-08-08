@@ -1,4 +1,3 @@
-// src/components/StreamsChart.jsx
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 

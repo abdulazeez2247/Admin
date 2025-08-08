@@ -30,7 +30,7 @@ const DashboardLayout = ({ setSelectedSport }) => {
           console.error("API response for /api/sports is not an array:", response.data);
         }
 
-        // If no data fetched, use static list
+
         if (fetchedData.length === 0) {
           setSportsList(staticSportsList);
         } else {
@@ -39,7 +39,7 @@ const DashboardLayout = ({ setSelectedSport }) => {
         
       } catch (error) {
         console.error("Failed to fetch sports list for sidebar, falling back to static list:", error);
-        setSportsList(staticSportsList); // Fallback to static list on error
+        setSportsList(staticSportsList); 
       }
     };
 

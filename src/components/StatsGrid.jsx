@@ -1,11 +1,8 @@
-// src/components/StatsGrid.jsx
 import React from 'react';
 
 const StatsGrid = ({ stats }) => {
-  // Ensure 'stats' object and its properties are safely accessed
-  // The 'stats' prop is initialized to { totalUsers: 0, totalStreams: 0, activeSports: 0 }
-  // in Dashboard.jsx, so direct access is generally safe, but defensive coding is good.
-  const { totalUsers, totalStreams, activeSports } = stats || {}; // Destructure with default empty object
+  
+  const { totalUsers, totalStreams, activeSports } = stats || {}; 
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

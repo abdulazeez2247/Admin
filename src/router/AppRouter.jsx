@@ -7,14 +7,13 @@ import DashboardLayout from '../layouts/DashboardLayout';
 
 const AppRouter = () => {
   const [selectedSport, setSelectedSport] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(true); // Update this later with real auth
+  const [isAuthenticated, setIsAuthenticated] = useState(true); 
 
   return (
     <Routes>
-      {/* Login Route */}
       <Route path="/" element={<AdminLoginPage setIsAuthenticated={setIsAuthenticated} />} />
 
-      {/* Protected Routes inside Dashboard Layout */}
+     
       {isAuthenticated && (
         <Route element={<DashboardLayout setSelectedSport={setSelectedSport} />}>
           <Route path="/dashboard" element={<Dashboard />} />
@@ -25,7 +24,6 @@ const AppRouter = () => {
         </Route>
       )}
 
-      {/* Fallback to Login if not authenticated */}
       {!isAuthenticated && (
         <Route path="*" element={<AdminLoginPage setIsAuthenticated={setIsAuthenticated} />} />
       )}
