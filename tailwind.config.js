@@ -1,11 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        
         'argon-dark': '#2d3748',
         'argon-light-blue': '#4c52f6', 
         'argon-gray': '#f8f9fe',
@@ -13,7 +14,6 @@ module.exports = {
         'argon-green': '#2dce89',
         'argon-orange': '#fb6340',
         'argon-red': '#f5365c',
-        
       },
       boxShadow: {
         'card': '0 0.5rem 1rem rgba(0, 0, 0, 0.15)',

@@ -1,50 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Topbar from '../components/Topbar';
 import { Outlet } from 'react-router-dom';
-import axios from 'axios';
 
 const DashboardLayout = ({ setSelectedSport }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const [sportsList, setSportsList] = useState([]);
-
-  const staticSportsList = [
+  
+  const sportsList = [
     { id: 'football', name: 'Football' },
-    { id: 'basketball', name: 'Basketball' },
     { id: 'baseball', name: 'Baseball' },
-    { id: 'volleyball', name: 'Volleyball' },
-    { id: 'table-tennis', name: 'Table Tennis' },
+    { id: 'amfootball', name: 'American Football' }
   ];
-
-  useEffect(() => {
-    const fetchSports = async () => {
-      try {
-        const response = await axios.get('/api/sports');
-        let fetchedData = [];
-        if (Array.isArray(response.data)) {
-          fetchedData = response.data;
-        } else if (response.data && Array.isArray(response.data.data)) {
-          fetchedData = response.data.data;
-        } else {
-          console.error("API response for /api/sports is not an array:", response.data);
-        }
-
-
-        if (fetchedData.length === 0) {
-          setSportsList(staticSportsList);
-        } else {
-          setSportsList(fetchedData);
-        }
-        
-      } catch (error) {
-        console.error("Failed to fetch sports list for sidebar, falling back to static list:", error);
-        setSportsList(staticSportsList); 
-      }
-    };
-
-    fetchSports();
-  }, []);
 
   const handleSportClick = (sportId) => {
     if (setSelectedSport) {
