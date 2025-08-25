@@ -33,17 +33,18 @@ export const staticDashboardData = {
 
   mostStreamedSports: [
     { name: "Football", percentage: 70, color: '#f5365c' },
-    { name: "Basketball", percentage: 15, color: '#fb6340' },
-    { name: "Table-Tennis", percentage: 10, color: '#2dce89' },
+    { name: "American Football", percentage: 15, color: '#fb6340' },
+    // { name: "Table-Tennis", percentage: 10, color: '#2dce89' },
     { name: "Baseball", percentage: 5, color: '#4c52f6' },
   ],
 
   sportsList: [
     { id: 'football', name: 'Football' },
-    { id: 'basketball', name: 'Basketball' },
-    { id: 'Table-Tennis', name: 'Table-Tennis' },
+    // { id: 'basketball', name: 'Basketball' },
+    // { id: 'Table-Tennis', name: 'Table-Tennis' },
     { id: 'Baseball', name: 'Baseball' },
-    { id: 'Volleyball', name: 'Volleyball' },
+    { id: 'American Football', name: 'American Football' },
+    // { id: 'Volleyball', name: 'Volleyball' },
    
   ],
 
@@ -56,7 +57,7 @@ export const staticDashboardData = {
       { id: 'match3', teams: 'Lakers vs Celtics', time: 'Live Now', score: '98-95' },
     ],
     tennis: [
-      { id: 'match4', teams: 'Djokovic vs Alcaraz', time: 'Live Now', score: '2-1 Sets' },
+      // { id: 'match4', teams: 'Djokovic vs Alcaraz', time: 'Live Now', score: '2-1 Sets' },
     ],
   }
 };
