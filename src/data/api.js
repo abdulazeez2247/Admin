@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const DASHBOARD_API_BASE_URL = "https://reedstreamsbackend1.onrender.com/api/dashboard";
-const MATCHES_API_BASE_URL = "https://reedstreamsbackend1.onrender.com/api/matches";
+const DASHBOARD_API_BASE_URL = "https://reedstreams-backend.onrender.com/api/dashboard";
+const MATCHES_API_BASE_URL = "https://reedstreams-backend.onrender.com/api/matches";
 
 export const getLiveStats = async () => {
   const res = await axios.get(`${DASHBOARD_API_BASE_URL}/live-stats`); 
