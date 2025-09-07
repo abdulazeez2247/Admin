@@ -1,17 +1,9 @@
 {
   "version": 3,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/dashboard",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/live-matches", 
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
   "builds": [
