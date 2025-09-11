@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://reedstreams-backend.onrender.com/api/dashboard";
+const API_BASE_URL = "https://reedstreams-backend.onrender.com/api/";
 
 export const getLiveStats = async () => {
   try {
