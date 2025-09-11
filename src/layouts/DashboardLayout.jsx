@@ -8,9 +8,9 @@ const DashboardLayout = ({ setSelectedSport }) => {
   const [searchTerm, setSearchTerm] = useState('');
   
   const sportsList = [
-    { id: 'football', name: 'Football' },
-    { id: 'baseball', name: 'Baseball' },
-    { id: 'amfootball', name: 'American Football' }
+    { id: '1', name: 'Football' },
+    { id: '6', name: 'Baseball' },
+    { id: '17', name: 'NFL' }
   ];
 
   const handleSportClick = (sportId) => {

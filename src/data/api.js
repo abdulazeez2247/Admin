@@ -1,25 +1,43 @@
 import axios from "axios";
 
-const DASHBOARD_API_BASE_URL = "https://reedstreams-backend.onrender.com/api/dashboard";
-
-const MATCHES_API_BASE_URL = `${DASHBOARD_API_BASE_URL}/matches`;
+const API_BASE_URL = "https://reedstreams-backend.onrender.com/api";
 
 export const getLiveStats = async () => {
-  const res = await axios.get(`${DASHBOARD_API_BASE_URL}/live-stats`);
-  return res.data.data;
+  try {
+    const res = await axios.get(`${API_BASE_URL}/dashboard/live-stats`);
+    return res.data.data; // ✅ Correct structure
+  } catch (error) {
+    console.error("Error fetching live stats:", error);
+    return { totalUsers: 0, totalStreams: 0, activeSports: 0 };
+  }
 };
 
 export const getStreamsPerDay = async () => {
-  const res = await axios.get(`${DASHBOARD_API_BASE_URL}/streams-per-day`);
-  return res.data.data;
+  try {
+    const res = await axios.get(`${API_BASE_URL}/dashboard/streams-per-day`);
+    return res.data.data; // ✅ Correct structure
+  } catch (error) {
+    console.error("Error fetching streams per day:", error);
+    return [];
+  }
 };
 
 export const getMostStreamedSports = async () => {
-  const res = await axios.get(`${DASHBOARD_API_BASE_URL}/most-streamed-sports`);
-  return res.data; // ✅ no `.data.data`
+  try {
+    const res = await axios.get(`${API_BASE_URL}/dashboard/most-streamed-sports`);
+    return res.data; // ✅ Correct - returns array directly
+  } catch (error) {
+    console.error("Error fetching most streamed sports:", error);
+    return [];
+  }
 };
 
 export const getLiveMatchesBySport = async (sportId) => {
-  const res = await axios.get(`${MATCHES_API_BASE_URL}?sport_id=${sportId}`);
-  return res.data.matches || [];
+  try {
+    const res = await axios.get(`${API_BASE_URL}/dashboard/matches?sport_id=${sportId}`);
+    return res.data.matches || []; // ✅ Correct structure
+  } catch (error) {
+    console.error("Error fetching live matches:", error);
+    return [];
+  }
 };
