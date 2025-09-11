@@ -56,7 +56,9 @@ const Dashboard = () => {
   const [stats, setStats] = useState({ totalUsers: 0, totalStreams: 0, activeSports: 0 });
   const [chartData, setChartData] = useState([]);
   const [sportsData, setSportsData] = useState([]);
-  const [matches, setMatches] = useState([]);
+  const [matches, setMatches] = useState([
+  { matchId: 'temp1', homeTeam: 'Loading...', awayTeam: 'Loading...', competitionName: 'Loading...', matchTime: Date.now()/1000, matchStatus: 'LOADING' }
+]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
