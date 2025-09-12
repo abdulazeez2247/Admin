@@ -4,7 +4,7 @@ const API_BASE_URL = "https://reedstreams-backend.onrender.com/api";
 
 export const getLiveStats = async () => {
   try {
-    const res = await axios.get(`${API_BASE_URL}/dashboard/live-stats`);
+    const res = await axios.get(`${API_BASE_URL}dashboard/live-stats`);
     return res.data.data; // ✅ Correct structure
   } catch (error) {
     console.error("Error fetching live stats:", error);
@@ -14,7 +14,7 @@ export const getLiveStats = async () => {
 
 export const getStreamsPerDay = async () => {
   try {
-    const res = await axios.get(`${API_BASE_URL}/dashboard/streams-per-day`);
+    const res = await axios.get(`${API_BASE_URL}dashboard/streams-per-day`);
     return res.data.data; // ✅ Correct structure
   } catch (error) {
     console.error("Error fetching streams per day:", error);
